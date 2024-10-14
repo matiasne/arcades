@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "market_places",
+  "info": {
+    "singularName": "market-place",
+    "pluralName": "market-places",
+    "displayName": "MarketPlace",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Name"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "businesses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::business.business",
+      "mappedBy": "market_place"
+    }
+  }
+}

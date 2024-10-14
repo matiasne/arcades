@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_mercado_pago_connection_data",
+  "info": {
+    "displayName": "Mercado Pago Connection Data",
+    "icon": "store",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "ClientID": {
+      "type": "string",
+      "required": false,
+      "unique": true,
+      "private": true
+    },
+    "ClientSecret": {
+      "type": "string",
+      "required": false,
+      "unique": true,
+      "private": true
+    },
+    "FeeInPercentage": {
+      "type": "integer"
+    }
+  }
+}

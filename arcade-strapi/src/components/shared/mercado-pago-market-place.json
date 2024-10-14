@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_mercado_pago_market_places",
+  "info": {
+    "displayName": "MercadoPagoMarketPlace",
+    "icon": "store",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "ClientID": {
+      "type": "string",
+      "required": true,
+      "private": true
+    },
+    "ClientSecret": {
+      "type": "string",
+      "required": true,
+      "private": true
+    },
+    "AppID": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

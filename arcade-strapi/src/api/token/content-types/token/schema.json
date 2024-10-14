@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tokens",
+  "info": {
+    "singularName": "token",
+    "pluralName": "tokens",
+    "displayName": "Token"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "business": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::business.business",
+      "inversedBy": "token"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "token"
+    },
+    "Amount": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "businesses",
+  "info": {
+    "singularName": "business",
+    "pluralName": "businesses",
+    "displayName": "Business",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "Logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Name",
+      "required": true
+    },
+    "Location": {
+      "displayName": "Location",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.location"
+    },
+    "SEO": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
+    },
+    "machines": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::machine.machine",
+      "mappedBy": "business"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "businesses"
+    },
+    "token": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::token.token",
+      "mappedBy": "business"
+    },
+    "MercadoPagoConnection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.mercado-pago-connection-data",
+      "private": true
+    },
+    "market_place": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::market-place.market-place",
+      "inversedBy": "businesses"
+    }
+  }
+}
