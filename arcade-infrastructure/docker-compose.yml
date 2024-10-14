@@ -1,0 +1,16 @@
+version: "3.1"
+volumes:
+  postgres_storage:
+  minio_storage:
+
+services:
+  postgres:
+    image: postgres:16.0-alpine
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: arcades
+      POSTGRES_PASSWORD: arcades
+    volumes:
+      - postgres_storage:/var/lib/postgresql
