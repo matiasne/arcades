@@ -1,0 +1,26 @@
+.animatedBackground {
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  background: url("/logos-back.png");
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 500px 781px;
+  opacity: 0.4;
+  rotate: -45deg;
+  overflow: hidden;
+  /*adjust s value for speed*/
+  animation: animatedBackground 200s linear infinite;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -5000px -1000px;
+  }
+}

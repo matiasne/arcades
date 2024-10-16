@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.loserball",
+    "sha256_cert_fingerprints":
+    ["47:49:AE:B4:1F:87:02:B9:1E:AC:7B:EE:8F:44:22:AF:89:94:72:D9:49:70:D5:6C:A9:15:EC:B2:E5:D1:E2:E2"]
+  }
+}]

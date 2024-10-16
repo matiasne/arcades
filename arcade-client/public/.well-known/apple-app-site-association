@@ -1,0 +1,21 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "74FG3277FF.com.loserballmobile",
+                "components": [
+                    {
+                        "/": "/join",
+                        "?": {
+                            "token": "?*"
+                        }
+                    },
+                    {
+                        "/": "/login"
+                    }
+                ]
+            }
+        ]
+    }
+}
