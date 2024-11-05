@@ -7,7 +7,7 @@ volumes:
 services:
   strapi:
     build:
-      context: ../arcade-strapi-admin
+      context: ../arcade-strapi
       args:
         - STRAPI_NODE_ENV=${STRAPI_NODE_ENV}
         - STRAPI_APP_KEYS=${STRAPI_APP_KEYS}
@@ -42,12 +42,12 @@ services:
       - DATABASE_SSL=${DATABASE_SSL}
 
     volumes:
-      - ../arcade-strapi-admin/config:/opt/app/config
-      - ../arcade-strapi-admin/src:/opt/app/src
-      - ../arcade-strapi-admin/package.json:/opt/package.json
-      - ../arcade-strapi-admin/yarn.lock:/opt/yarn.lock
-      - ../arcade-strapi-admin/.env:/opt/app/.env
-      - ../arcade-strapi-admin/public/uploads:/opt/app/public/uploads
+      - ../arcade-strapi/config:/opt/app/config
+      - ../arcade-strapi/src:/opt/app/src
+      - ../arcade-strapi/package.json:/opt/package.json
+      - ../arcade-strapi/yarn.lock:/opt/yarn.lock
+      - ../arcade-strapi/.env:/opt/app/.env
+      - ../arcade-strapi/public/uploads:/opt/app/public/uploads
     ports:
       - "1337:1337"
 
